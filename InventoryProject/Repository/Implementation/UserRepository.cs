@@ -21,7 +21,7 @@ namespace InventoryProject.Repository.Implementation
       await _context.SaveChangesAsync();
       return user;
     }
-
+    //
     public async Task<User> AuthenticateUserAsync(string username, string password)
     {
       var user = await _context.Users.FirstOrDefaultAsync(u => u.username == username && u.password == password);
