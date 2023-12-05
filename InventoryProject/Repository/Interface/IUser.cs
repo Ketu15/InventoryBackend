@@ -6,8 +6,10 @@ namespace InventoryProject.Repository.Interface
   {
     Task<User> CreateUserAsync(User user);
     Task<User> AuthenticateUserAsync(string username, string password);
+    Task<IEnumerable<User>> GetAllUsersAsync(); // Add this method
   }
 }
+
 //public interface IUser
 //{
   

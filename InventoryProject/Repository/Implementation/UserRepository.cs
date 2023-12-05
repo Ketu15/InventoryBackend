@@ -27,5 +27,10 @@ namespace InventoryProject.Repository.Implementation
       var user = await _context.Users.FirstOrDefaultAsync(u => u.username == username && u.password == password);
       return user;
     }
+
+    public async Task<IEnumerable<User>> GetAllUsersAsync()
+    {
+      return await _context.Users.ToListAsync();
+    }
   }
 }

@@ -32,6 +32,12 @@ namespace InventoryProject.Controllers
 
       return Ok(user);
     }
+    [HttpGet("all")]
+    public async Task<IActionResult> GetAllUsers()
+    {
+      var users = await _userRepository.GetAllUsersAsync();
+      return Ok(users);
+    }
 
 
   }
